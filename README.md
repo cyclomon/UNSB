@@ -1,4 +1,4 @@
-# UNSB
+# Unpaired Neural Schrödinger Bridge
 
 Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://google.com) by [Beomsu Kim](https://scholar.google.co.kr/citations?user=TofIFUgAAAAJ&hl=en)\*, [Gihyun Kwon](https://scholar.google.co.kr/citations?user=yexbg8gAAAAJ&hl=en)\*, [Kwanyoung Kim](https://sites.google.com/view/kwanyoung-kim/), and [Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en). (\*Equal contribution)
 
