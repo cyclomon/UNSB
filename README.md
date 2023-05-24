@@ -3,10 +3,7 @@
 Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://google.com).
 
 <p float="center">
-  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/h2z.gif" width="100" />
-  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/l2c.gif" width="100" /> 
-  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/s2w.gif" width="100" />
-  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/m2s.gif" width="100" />
+  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/gif.gif" />
 </p>
 
 <p align="center">
