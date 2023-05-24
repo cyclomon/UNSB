@@ -23,7 +23,7 @@ Quantitatively, out method out-performed all one-step baseline methods based on 
 The superior performance of UNSB can be attributed to the fact that UNSB generates images in multiple stages. Indeed, we observe in the graph below that sample quality improves with more NFEs.
 
 <p align="center">
-  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/NFE_FID.png" width="40%" height="40%" />
+  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/NFE_FID.png" width="80%" height="80%" />
 </p>
 
 However, occasionally, too much NFEs led to "over-translation", where the target domain style is excessively applied to the source image. A failure case is shown below. This may be the reason behind increasing FID for some datasets at NFEs 4 or 5.
