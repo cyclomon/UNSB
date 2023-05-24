@@ -43,7 +43,7 @@ However, occasionally, too much NFEs led to "over-translation", where the target
 If you find this paper useful for your research, please consider citing
 ```bib
 @article{
-  kim2023unbs,
+  kim2023unsb,
   title={Unpaired Image-to-Image Translation via Neural Schrödinger Bridge},
   author={Beomsu Kim and Gihyun Kwon and Kwanyoung Kim and Jong Chul Ye},
   journal={arxiv preprint arXiv:2305.},
