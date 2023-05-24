@@ -14,4 +14,21 @@ We propose the **Unpaired Neural Schrödinger Bridge (UNSB)**, which employs adv
   <img src="https://github.com/cyclomon/UNSB/blob/main/assets/main_result_2.jpg" />
 </p>
 
+<p align="center">
+  <img src="https://github.com/cyclomon/UNSB/blob/main/assets/NFE_FID.png" width="40%" height="40%" />
+</p>
+
 **Code will be released soon.**
+
+## References
+
+If you find this paper useful for your research, please consider citing
+```bib
+@article{
+  kim2023unbs,
+  title={Unpaired Image-to-Image Translation via Neural Schrödinger Bridge},
+  author={Beomsu Kim and Gihyun Kwon and Kwanyoung Kim and Jong Chul Ye},
+  journal={arxiv preprint arXiv:2305.},
+  year={2023}
+}
+```
