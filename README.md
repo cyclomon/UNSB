@@ -46,7 +46,7 @@ If you find this paper useful for your research, please consider citing
   kim2023unsb,
   title={Unpaired Image-to-Image Translation via Neural Schrödinger Bridge},
   author={Beomsu Kim and Gihyun Kwon and Kwanyoung Kim and Jong Chul Ye},
-  journal={arxiv preprint arXiv:2305.},
+  journal={arxiv preprint arXiv:2305.15086},
   year={2023}
 }
 ```
