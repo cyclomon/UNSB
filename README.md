@@ -83,7 +83,7 @@ python test.py --dataroot [path-to-dataset] --name [experiment-name] --mode sb \
 
 The outputs will be saved in ```./results/[experiment-name]/```
 
-Folders names as ```fake_[num_NFE]``` represents the generated outputs with different NFE steps.
+Folders named as ```fake_[num_NFE]``` represent the generated outputs with different NFE steps.
 
 For evaluation, we use official module of [pytorch-fid](https://github.com/mseitzer/pytorch-fid)
 
