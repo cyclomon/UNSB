@@ -2,6 +2,8 @@
 
 Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://arxiv.org/abs/2305.15086) by [Beomsu Kim](https://scholar.google.co.kr/citations?user=TofIFUgAAAAJ&hl=en)\*, [Gihyun Kwon](https://scholar.google.co.kr/citations?user=yexbg8gAAAAJ&hl=en)\*, [Kwanyoung Kim](https://sites.google.com/view/kwanyoung-kim/), and [Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en). (\*Equal contribution)
 
+**Code will be released soon, so stay tuned!**
+
 <p align="center">
   <img src="https://github.com/cyclomon/UNSB/blob/main/assets/gif.gif" />
 </p>
@@ -35,8 +37,6 @@ However, occasionally, too much NFEs led to "over-translation", where the target
 <p align="center">
   <img src="https://github.com/cyclomon/UNSB/blob/main/assets/Main_failure.png" width="40%" height="40%" />
 </p>
-
-**Code will be released soon.**
 
 ## References
 
