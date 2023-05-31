@@ -2,7 +2,6 @@
 
 Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://arxiv.org/abs/2305.15086) by [Beomsu Kim](https://scholar.google.co.kr/citations?user=TofIFUgAAAAJ&hl=en)\*, [Gihyun Kwon](https://scholar.google.co.kr/citations?user=yexbg8gAAAAJ&hl=en)\*, [Kwanyoung Kim](https://sites.google.com/view/kwanyoung-kim/), and [Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en). (\*Equal contribution)
 
-**Code will be released soon, so stay tuned!**
 
 <p align="center">
   <img src="https://github.com/cyclomon/UNSB/blob/main/assets/gif.gif" />
@@ -38,6 +37,58 @@ However, occasionally, too much NFEs led to "over-translation", where the target
   <img src="https://github.com/cyclomon/UNSB/blob/main/assets/Main_failure.png" width="40%" height="40%" />
 </p>
 
+## Environment
+```
+$ conda create -n UNSB python=3.6
+$ pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+$ conda install -c conda-forge packaging 
+$ conda install -c conda-forge visdom 
+$ conda install -c conda-forge gputil 
+$ conda install -c conda-forge dominate 
+```
+
+## Dataset Download
+Download the dataset with following script e.g.
+
+```
+bash ./datasets/download_cut_dataset.sh horse2zebra
+```
+
+Due to copyright issue, we do not directly provide cityscapes dataset. 
+please refer to the original repository of [CUT](https://github.com/taesungp/contrastive-unpaired-translation).
+
+## Training 
+Refer the ```./run_train.sh``` file or
+
+```
+python train.py --dataroot ./datasets/horse2zebra --name h2z_SB --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0
+```
+
+for cityscapes and map2sat, 
+
+```
+python train.py --dataroot ./datasets/cityscapes --name city_SB --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0 --direction B2A
+```
+
+## Test & Evaluation
+Refer the ```./run_test.sh``` file or 
+
+```
+python test.py --dataroot [path-to-dataset] --name [experiment-name] --mode sb --phase test --epoch [epoch-for-test] --eval --num_test [num-test-image] --gpu_ids 0
+```
+
+The outputs will be saved in ```./results/[experiment-name]/```
+
+Folders names as ```fake_[num_NFE]``` represents the generated outputs with different NFE steps.
+
+For evaluation, we use official module of [pytorch-fid](https://github.com/mseitzer/pytorch-fid)
+
+```
+python -m pytorch_fid [output-path] [real-path]
+```
+
+```real-path``` should be test images of target domain. 
+
 ## References
 
 If you find this paper useful for your research, please consider citing
@@ -50,3 +101,7 @@ If you find this paper useful for your research, please consider citing
   year={2023}
 }
 ```
+### Acknowledgement
+Our source code is based on [CUT](https://github.com/taesungp/contrastive-unpaired-translation). \
+We thank [pytorch-fid](https://github.com/mseitzer/pytorch-fid) for FID calculation. \
+We modified the network based on the implementation of [DDGAN](https://github.com/NVlabs/denoising-diffusion-gan).
