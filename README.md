@@ -74,7 +74,8 @@ python train.py --dataroot ./datasets/cityscapes --name city_SB --mode sb --lamb
 Refer the ```./run_test.sh``` file or 
 
 ```
-python test.py --dataroot [path-to-dataset] --name [experiment-name] --mode sb --phase test --epoch [epoch-for-test] --eval --num_test [num-test-image] --gpu_ids 0
+python test.py --dataroot [path-to-dataset] --name [experiment-name] --mode sb \
+--phase test --epoch [epoch-for-test] --eval --num_test [num-test-image] --gpu_ids 0 --checkpoints_dir ./checkpoints
 ```
 
 The outputs will be saved in ```./results/[experiment-name]/```
