@@ -61,13 +61,15 @@ please refer to the original repository of [CUT](https://github.com/taesungp/con
 Refer the ```./run_train.sh``` file or
 
 ```
-python train.py --dataroot ./datasets/horse2zebra --name h2z_SB --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0
+python train.py --dataroot ./datasets/horse2zebra --name h2z_SB \
+--mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0
 ```
 
 for cityscapes and map2sat, 
 
 ```
-python train.py --dataroot ./datasets/cityscapes --name city_SB --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0 --direction B2A
+python train.py --dataroot ./datasets/cityscapes --name city_SB \
+--mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0 --direction B2A
 ```
 
 ## Test & Evaluation
@@ -75,7 +77,8 @@ Refer the ```./run_test.sh``` file or
 
 ```
 python test.py --dataroot [path-to-dataset] --name [experiment-name] --mode sb \
---phase test --epoch [epoch-for-test] --eval --num_test [num-test-image] --gpu_ids 0 --checkpoints_dir ./checkpoints
+--phase test --epoch [epoch-for-test] --eval --num_test [num-test-image] \
+--gpu_ids 0 --checkpoints_dir ./checkpoints
 ```
 
 The outputs will be saved in ```./results/[experiment-name]/```
