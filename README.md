@@ -72,6 +72,13 @@ python train.py --dataroot ./datasets/cityscapes --name city_SB \
 --mode sb --lambda_SB 1.0 --lambda_NCE 1.0 --gpu_ids 0 --direction B2A
 ```
 
+for summer2winter,
+
+```
+cd vgg_sb
+bash ./scripts/train_sc_sim2win_main.sh
+```
+
 ## Test & Evaluation
 Refer the ```./run_test.sh``` file or 
 
@@ -92,6 +99,11 @@ python -m pytorch_fid [output-path] [real-path]
 ```
 
 ```real-path``` should be test images of target domain. 
+
+For testing on our vgg-based trained model, 
+
+Refer the ```./vgg_sb/scripts/test_sc_main.sh``` file 
+
 
 ## References
 
