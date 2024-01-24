@@ -1,6 +1,6 @@
 # Unpaired Neural Schrödinger Bridge
 
-Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://arxiv.org/abs/2305.15086) by [Beomsu Kim](https://scholar.google.co.kr/citations?user=TofIFUgAAAAJ&hl=en)\*, [Gihyun Kwon](https://scholar.google.co.kr/citations?user=yexbg8gAAAAJ&hl=en)\*, [Kwanyoung Kim](https://sites.google.com/view/kwanyoung-kim/), and [Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en). (\*Equal contribution)
+Official PyTorch implementation of [Unpaired Image-to-Image Translation via Neural Schrödinger Bridge](https://arxiv.org/abs/2305.15086) by [Beomsu Kim](https://scholar.google.co.kr/citations?user=TofIFUgAAAAJ&hl=en)\*, [Gihyun Kwon](https://scholar.google.co.kr/citations?user=yexbg8gAAAAJ&hl=en)\*, [Kwanyoung Kim](https://sites.google.com/view/kwanyoung-kim/), and [Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=en) (\*Equal contribution), **accepted to ICLR 2024**.
 
 
 <p align="center">
@@ -109,12 +109,12 @@ Refer the ```./vgg_sb/scripts/test_sc_main.sh``` file
 
 If you find this paper useful for your research, please consider citing
 ```bib
-@article{
+@InProceedings{
   kim2023unsb,
   title={Unpaired Image-to-Image Translation via Neural Schrödinger Bridge},
   author={Beomsu Kim and Gihyun Kwon and Kwanyoung Kim and Jong Chul Ye},
-  journal={arxiv preprint arXiv:2305.15086},
-  year={2023}
+  booktitle={ICLR},
+  year={2024}
 }
 ```
 ### Acknowledgement
