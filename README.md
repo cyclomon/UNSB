@@ -42,7 +42,7 @@ However, occasionally, too much NFEs led to "over-translation", where the target
 $ conda create -n UNSB python=3.6
 $ pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 $ conda install -c conda-forge packaging 
-$ conda install -c conda-forge visdom 
+$ conda install -c "conda-forge/label/cf201901" visdom 
 $ conda install -c conda-forge gputil 
 $ conda install -c conda-forge dominate 
 ```
@@ -78,6 +78,8 @@ for summer2winter,
 cd vgg_sb
 bash ./scripts/train_sc_sim2win_main.sh
 ```
+
+Although the training is available with arbitrary batch size, we recommend to use batch size = 1.
 
 ## Test & Evaluation
 Refer the ```./run_test.sh``` file or 
