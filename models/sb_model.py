@@ -174,7 +174,7 @@ class SBModel(BaseModel):
         times = torch.tensor(times).float().cuda()
         self.times = times
         bs =  self.real_A.size(0)
-        time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[bs]).cuda()).long()
+        time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[1]).cuda()).long()
         self.time_idx = time_idx
         self.timestep     = times[time_idx]
         
@@ -242,7 +242,7 @@ class SBModel(BaseModel):
             times = torch.tensor(times).float().cuda()
             self.times = times
             bs =  self.real.size(0)
-            time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[bs]).cuda()).long()
+            time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[1]).cuda()).long()
             self.time_idx = time_idx
             self.timestep     = times[time_idx]
             visuals = []
