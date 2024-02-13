@@ -141,7 +141,6 @@ class SBModel(BaseModel):
         if self.opt.netF == 'mlp_sample':
             self.optimizer_F.zero_grad()
         self.loss_G = self.compute_G_loss()
-        self.compute_G_loss()
         self.loss_G.backward()
         self.optimizer_G.step()
         if self.opt.netF == 'mlp_sample':
