@@ -154,7 +154,7 @@ class SCModel(BaseModel):
         times = torch.tensor(times).float().cuda()
         self.times = times
         bs =  self.real_A.size(0)
-        time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[bs]).cuda()).long()
+        time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[1]).cuda()).long()
         self.time_idx = time_idx
         self.timestep     = times[time_idx]
         
@@ -193,7 +193,7 @@ class SCModel(BaseModel):
                 # self.Xt2 = Xt2
                 
         
-        z_in    = torch.randn(size=[2*bs,4*self.opt.ngf]).to(self.real_A.device)
+        z_in    = torch.randn(size=[bs,4*self.opt.ngf]).to(self.real_A.device)
         z_in2    = torch.randn(size=[bs,4*self.opt.ngf]).to(self.real_A.device)
         """Run forward pass"""
         self.real = torch.cat((self.real_A, self.real_B), dim=0) if (self.opt.lambda_identity + self.opt.lambda_spatial_idt > 0) and self.opt.isTrain else self.real_A
@@ -216,7 +216,7 @@ class SCModel(BaseModel):
             times = torch.tensor(times).float().cuda()
             self.times = times
             bs =  self.real.size(0)
-            time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[bs]).cuda()).long()
+            time_idx = (torch.randint(T, size=[1]).cuda() * torch.ones(size=[1]).cuda()).long()
             self.time_idx = time_idx
             self.timestep     = times[time_idx]
             visuals = []
