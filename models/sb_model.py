@@ -324,7 +324,7 @@ class SBModel(BaseModel):
         else:
             loss_NCE_both = self.loss_NCE
         
-        self.loss_G = self.loss_G_GAN + self.loss_SB + loss_NCE_both
+        self.loss_G = self.loss_G_GAN + self.opt.lambda_SB*self.loss_SB + self.opt.lambda_NCE*loss_NCE_both
         return self.loss_G
 
 
