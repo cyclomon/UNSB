@@ -106,6 +106,7 @@ For testing on our vgg-based trained model,
 
 Refer the ```./vgg_sb/scripts/test_sc_main.sh``` file 
 
+The pre-trained checkpoints are provided [here](https://drive.google.com/drive/folders/1Q8tuBGegMMHd9PzvcklDm0wM1sE4PPwK?usp=sharing)
 
 ## References
 
